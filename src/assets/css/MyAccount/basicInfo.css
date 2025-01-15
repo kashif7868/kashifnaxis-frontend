@@ -46,25 +46,6 @@
   color: #fff;
 }
 
-.social-links {
-  margin-top: 16px;
-}
-
-.social-icon {
-  margin-right: 12px;
-  font-size: 24px;
-  color: #fff;
-  transition: color 0.3s ease;
-}
-
-.social-icon:hover {
-  color: #007bff; /* Hover color */
-}
-
-.social-icon:active {
-  color: #ffcc00; /* Active color */
-}
-
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .basic-info-container {

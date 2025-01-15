@@ -1,81 +1,72 @@
-import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { useMediaQuery } from 'react-responsive';
-import logo from "../assets/images/logo.png"; // Path to your logo image
+import React from "react";
+import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
+import { AiOutlineInstagram } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import "../assets/css/footer.css";
 
 const Footer = () => {
-  // Use media query to detect mobile screens (max width 768px)
-  const isMobile = useMediaQuery({ maxWidth: 768 });
-
   return (
-    <footer className="footer">
-      <div className="footer-container">
-        {/* Logo Section */}
+    <footer className="footer-container">
+      {/* Footer Content Section */}
+      <div className="footer-content">
+        {/* Footer Middle Section (Links) */}
         <motion.div
-          className="footer-section logo-section"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <div className="footer-logo">
-            <Link to="/">
-              <img src={logo} alt="Kashif Naxis" />
-            </Link>
-          </div>
-        </motion.div>
-
-        {/* Navigation Links Section */}
-        <motion.div
-          className="footer-section nav-links-section"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-        >
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
-        </motion.div>
-
-        {/* Footer Right Section (Social Icons and Copyright) */}
-        <motion.div
-          className="footer-section footer-right"
+          className="footer-content-links"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
         >
-          <p>&copy; 2024 Kashif Naxis. All rights reserved.</p>
-          {isMobile ? (
-            <div className="social-icons">
-              <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
-                <FaGithub className="social-icon" />
-              </a>
-              <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin className="social-icon" />
-              </a>
-            </div>
-          ) : (
-            <div className="social-icons">
-              <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
-                <FaGithub className="social-icon" />
-              </a>
-              <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin className="social-icon" />
-              </a>
-              <a href="https://twitter.com/your-username" target="_blank" rel="noopener noreferrer">
-                <FaTwitter className="social-icon" />
-              </a>
-              <a href="https://www.facebook.com/your-profile" target="_blank" rel="noopener noreferrer">
-                <FaFacebook className="social-icon" />
-              </a>
-            </div>
-          )}
+          <ul className="footer-links-list">
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+          </ul>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 1.5 }}
+          className="footer-social-links-container"
+        >
+          <Link
+            href="https://www.linkedin.com/in/kashif-ali-b82a76220"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-social-link"
+          >
+            <FaLinkedin size={30} className="footer-social-icon footer-linkedin-icon" />
+          </Link>
+          <Link
+            href="https://github.com/kashif7868"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-social-link"
+          >
+            <FaGithub size={30} className="footer-social-icon footer-github-icon" />
+          </Link>
+          <Link
+            href="https://www.facebook.com/kashifali.kashifali.90813"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-social-link"
+          >
+            <FaFacebook size={30} className="footer-social-icon footer-facebook-icon" />
+          </Link>
+          <Link
+            href="https://www.instagram.com/kashif_nexis_"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-social-link"
+          >
+            <AiOutlineInstagram
+              size={30}
+              className="footer-social-icon footer-instagram-icon"
+            />
+          </Link>
         </motion.div>
       </div>
 

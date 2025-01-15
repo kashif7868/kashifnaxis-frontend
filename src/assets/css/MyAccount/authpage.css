@@ -178,7 +178,11 @@
 .auth-toggle:hover {
   color: #00a7c8; /* Darker blue on hover */
 }
-
+.auth-message{
+  color: #00a7c8;
+  text-align: center;
+  margin: 10px 0;
+}
 /* Responsive Styles */
 @media (max-width: 480px) {
   .auth-form-container {

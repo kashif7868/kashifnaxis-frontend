@@ -1,10 +1,9 @@
-import React, { useState, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import Particles from 'react-particles';
 import { loadSlim } from 'tsparticles-slim';
 import '../assets/css/backgroundAnimation.css';
 
 const BackgroundAnimation = () => {
-  const [particleCount, setParticleCount] = useState(0);
 
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
@@ -14,7 +13,7 @@ const BackgroundAnimation = () => {
   const particlesLoaded = useCallback(async (container) => {
     console.log(container);
     if (container) {
-      setParticleCount(container.particles.count); // Update the particle count when particles are loaded
+      console.log('Particle Count:', container.particles.count); // Log the particle count
     }
   }, []);
 
@@ -28,7 +27,7 @@ const BackgroundAnimation = () => {
         options={{
           background: {
             color: {
-              value: "#333", // Background color
+              value: "#050505", // Background color
             },
           },
           fpsLimit: 120,
@@ -72,15 +71,15 @@ const BackgroundAnimation = () => {
                 default: "bounce",
               },
               random: false,
-              speed: 1, // Particle speed
+              speed: 0.3, // Particle speed
               straight: false,
             },
             number: {
               density: {
                 enable: true,
-                area: 800,
+                area: 1200,
               },
-              value: 80, // Number of particles
+              value: 250, // Number of particles
             },
             opacity: {
               value: 0.5,
@@ -95,11 +94,6 @@ const BackgroundAnimation = () => {
           detectRetina: true,
         }}
       />
-
-      {/* Particle count display */}
-      <div className="count-particles">
-        <span className="js-count-particles">{particleCount}</span> particles
-      </div>
     </div>
   );
 };

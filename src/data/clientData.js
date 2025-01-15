@@ -20,6 +20,13 @@ const clientData = [
       rating: 5, // Star rating (1 to 5)
       image: "https://via.placeholder.com/100",
     },
+    {
+      id: 4,
+      name: "Michael Smith",
+      review: "Great experience! The website and branding design were exactly what we needed.",
+      rating: 5, // Star rating (1 to 5)
+      image: "https://via.placeholder.com/100",
+    },
   ];
   
   export default clientData;

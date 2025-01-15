@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import myImage from "../assets/images/461527908_2305518433121128_42846.png";
 import "../assets/css/pages/home.css";
+import { Link } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
@@ -21,6 +22,10 @@ import {
   FaPhoneAlt,
   FaPaperPlane,
 } from "react-icons/fa";
+import { VscGithubAlt } from "react-icons/vsc";
+import { TiSocialFacebook } from "react-icons/ti";
+import { BiLogoLinkedin } from "react-icons/bi";
+import { AiOutlineInstagram } from "react-icons/ai";
 import "react-circular-progressbar/dist/styles.css";
 import projectData from "../data/projectData";
 import clientData from "../data/clientData";
@@ -39,7 +44,6 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      {/* Section 1: Slider with Image and Name */}
       <section className="slider-container">
         <div className="slider-content">
           <div className="left-content">
@@ -81,27 +85,55 @@ const Home = () => {
               Let’s create something amazing together.{" "}
               <strong>Feel free to explore my work!</strong>
             </motion.p>
-            {/* Call-to-Action Buttons with Slide-in Animation */}
-            <div className="cta-container">
-              <motion.a
-                href="#portfolio"
-                className="cta-button"
-                initial={{ opacity: 0, x: -100 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1.2, delay: 1.5 }}
+            {/* Social Media Links with Animation */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, delay: 1.5 }}
+              className="social-links-container"
+            >
+              <Link
+                href="https://www.linkedin.com/in/kashif-ali-b82a76220"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
               >
-                View Portfolio
-              </motion.a>
-              <motion.a
-                href="#contact"
-                className="cta-button secondary"
-                initial={{ opacity: 0, x: 100 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1.2, delay: 1.5 }}
+                <BiLogoLinkedin
+                  size={30}
+                  className="social-icon linkedin-icon"
+                />
+              </Link>
+              <Link
+                href="https://github.com/kashif7868"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
               >
-                Contact Me
-              </motion.a>
-            </div>
+                <VscGithubAlt size={30} className="social-icon github-icon" />
+              </Link>
+              <Link
+                href="https://www.facebook.com/kashifali.kashifali.90813"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <TiSocialFacebook
+                  size={30}
+                  className="social-icon facebook-icon"
+                />
+              </Link>
+              <Link
+                href="https://www.instagram.com/kashif_nexis_"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <AiOutlineInstagram
+                  size={30}
+                  className="social-icon instagram-icon"
+                />
+              </Link>
+            </motion.div>
           </div>
           <div className="right-content">
             {/* Profile Image with Scale Animation */}
@@ -262,7 +294,6 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Section 3: My Services */}
       <section className="services-container" id="services">
         <div className="services-header">
@@ -346,7 +377,6 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Section 4: My Projects */}
       <section className="projects-container" id="projects">
         <div className="projects-header">
@@ -386,14 +416,32 @@ const Home = () => {
               <div className="project-info">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                <a
+              </div>
+              <div className="project-link-container">
+                <Link
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-link"
                 >
-                  <FaExternalLinkAlt /> View Project
-                </a>
+                  <VscGithubAlt /> Client
+                </Link>
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link"
+                >
+                  <VscGithubAlt /> Server
+                </Link>
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link"
+                >
+                  <FaExternalLinkAlt /> Live
+                </Link>
               </div>
             </motion.div>
           ))}
@@ -453,7 +501,6 @@ const Home = () => {
           ))}
         </div>
       </section>
-
       {/* Section 6: Contact */}
       <section className="contact-container" id="contact">
         {/* Contact Header */}
@@ -601,6 +648,7 @@ const Home = () => {
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
+            className="google-map"
           ></iframe>
         </motion.div>
       </section>

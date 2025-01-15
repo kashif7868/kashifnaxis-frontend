@@ -20,7 +20,7 @@ import "../assets/css/navbar.css";
 const Navbar = () => {
   const { user, logout } = useAuth(); // Get user and logout function from auth context
   const navigate = useNavigate();
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 1210px)" });
   const isScrolled = useScroll();
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false); // Add state for hover effect
