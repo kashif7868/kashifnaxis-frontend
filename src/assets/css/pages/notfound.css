@@ -1,0 +1,79 @@
+/* General wrapper for the 404 page */
+.notfound-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+  color: white; /* Set the text color to white */
+}
+
+/* Content container */
+.notfound-content {
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Error number styling */
+.notfound-error {
+  font-size: 120px;
+  font-weight: bold;
+  color: white; /* White color for the error number */
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Message styling */
+.notfound-message {
+  font-size: 18px;
+  color: white; /* White text color */
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+/* Button styling */
+.notfound-button {
+  font-size: 18px;
+  color: white;
+  background-color: #f39c12; /* Orange accent color */
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.notfound-button:hover {
+  background-color: #e67e22; /* Darker shade of orange on hover */
+  transform: scale(1.05); /* Slight scale effect */
+}
+
+.notfound-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.5); /* Custom focus shadow */
+}
+
+/* Add some animations to the error number */
+.notfound-error:hover {
+  transform: rotate(10deg); /* Rotate the number on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .notfound-error {
+      font-size: 100px; /* Smaller error number on mobile */
+  }
+
+  .notfound-message {
+      font-size: 16px; /* Slightly smaller message text on mobile */
+  }
+
+  .notfound-button {
+      padding: 10px 20px; /* Smaller padding on mobile */
+      font-size: 16px;
+  }
+}

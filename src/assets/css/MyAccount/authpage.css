@@ -1,0 +1,207 @@
+/* Auth Page Container */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Form Container */
+.auth-form-container {
+  background-color: #1f1e1e; /* Dark background for the form */
+  border-radius: 8px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.auth-title {
+  text-align: center;
+  font-size: 26px;
+  color: #fff; /* White text for the title */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Form Group for Inputs */
+.auth-form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Input Field */
+.auth-input {
+  width: 100%;
+  padding: 12px 12px 12px 36px;
+  font-size: 16px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background-color: #222; /* Dark input background */
+  color: #00d9e9; /* Text inside input is white */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.auth-input:focus {
+  border-color: #00d9e9; /* Blue glow on focus */
+  box-shadow: 0 0 6px rgba(0, 217, 233, 0.4);
+}
+
+/* Input Icon */
+.auth-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #00a7b3;
+  font-size: 18px;
+}
+
+/* Label for Input Fields */
+.auth-label {
+  position: absolute;
+  top: 12px;
+  left: 40px;
+  font-size: 14px;
+  color: #00d9e9; /* Lighter label color */
+  transition: all 0.3s ease;
+}
+
+/* Focused/Populated Label */
+.auth-input:focus ~ .auth-label,
+.auth-input:not(:placeholder-shown) ~ .auth-label {
+  top: -10px;
+  left: 35px;
+  font-size: 12px;
+  color: #00d9e9; /* Blue color on focus */
+  background-color: #333; /* Dark background for label */
+  padding: 0 5px;
+  border-radius: 4px;
+}
+
+/* Password Visibility Toggle */
+.password-field {
+  position: relative;
+}
+
+.auth-password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.auth-password-toggle:hover {
+  color: #00d9e9; /* Blue color on hover */
+}
+
+/* Button Styles */
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #00d9e9; /* Button background color */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.auth-btn:hover {
+  background-color: #00a7c8; /* Hover color for button */
+}
+
+/* Social Buttons */
+.auth-social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.auth-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 180px;
+  background-color: #2f3236;
+  color: white;
+}
+
+.auth-social-btn .auth-social-icon {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.google-btn:hover, .facebook-btn:hover {
+  background-color: #00a7c8;
+}
+
+.auth-social-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+
+/* Switch Between Sign In/Sign Up */
+.auth-switch {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.auth-toggle {
+  color: #00d9e9; /* Blue color for the toggle link */
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.auth-toggle:hover {
+  color: #00a7c8; /* Darker blue on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .auth-form-container {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .auth-title {
+    font-size: 22px;
+  }
+
+  .auth-input {
+    font-size: 14px;
+    padding: 10px 12px 10px 36px;
+  }
+
+  .auth-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .auth-btn-google {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}

@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "title": "Project 1",
+      "description": "This is a description of the first project. It’s built using React, Node.js, and MongoDB.",
+      "image": "https://via.placeholder.com/300",
+      "link": "https://example.com/project1"
+    },
+    {
+      "id": 2,
+      "title": "Project 2",
+      "description": "This is a description of the second project. It’s a full-stack application using MERN stack.",
+      "image": "https://via.placeholder.com/300",
+      "link": "https://example.com/project2"
+    },
+    {
+      "id": 3,
+      "title": "Project 3",
+      "description": "This is a description of the third project. It’s a WordPress website with custom plugins.",
+      "image": "https://via.placeholder.com/300",
+      "link": "https://example.com/project3"
+    }
+  ]
+  
